@@ -33,9 +33,6 @@ RUN pip3 install -r requirements.txt
 
 RUN apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended xzdec -y 
 RUN apt-get install cm-super -y 
-
-RUN pip3 install latex
-
 RUN apt-get install dvipng -y 
 
 CMD ["/bin/bash", "-l"]
