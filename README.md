@@ -96,5 +96,27 @@ Second attempt
     -v /home/sunnivin/Documents/code_work/GranFilm/GranFilm_Containers/granfilmpy/GranFilm/granfilmpy:/root/granfilmpy \
     granfilmpy:latest
 
+
+## Paper writing 
+
+Working with the old notebook of Ingve to match and make the first paper of spherical and coated particles 
+
+    docker run -it --rm \
+    -p 8888:8888 \
+    -v /home/sunnivin/GranFilm_tests/granfilm:/root/granfilm \
+    -v /home/sunnivin/GranFilm_tests/paper2013-02:/root/paper2013-02 \
+    -v /home/sunnivin/GranFilm_tests/granfilmpy:/root/granfilmpy \
+    granfilm/paper/o3
+
+
+Start the jupyter server: 
+
+    root@698ba9a6229f:~/granfilmpy/doc# jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root
+
+Where to place the granfilmpy folder inside the container 
+
+    GRANFILMPY_ROOT = /root/granfilmpy/src
+
+
 ## Container information: 
 Remember that the container granfilm-gcc-9.4 and granfilmpy is mainly used for development. granfilm-binder containes the executable in the shell. 
